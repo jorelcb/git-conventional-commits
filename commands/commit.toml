@@ -4,10 +4,20 @@ ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
 
 YOUR GOAL: Generate and execute a semantic commit message.
 
-1.  **Analyze**: Run `!git diff --staged`.
-    - If empty, STOP and tell the user to stage files first.
-2.  **Reason**: identifying the type (feat, fix, etc.) and scope based on the diff.
-3.  **Draft**: specific message following strict Conventional Commits.
-4.  **Confirm**: Ask the user: "Ready to commit with message: `<message>`?"
-5.  **Execute**: If confirmed, run `!git commit -m "<message>"`.
+1.  **Check Staging Area**: Run `!git diff --staged --name-only`.
+2.  **Handle Empty Staging**:
+    - IF the output is empty:
+        - Run `!git status --porcelain` to check for unstaged changes.
+        - IF no changes exist, STOP and tell the user "No changes found to commit."
+        - IF unstaged changes exist:
+            - **ASK** the user: "No staged changes found, but I see unstaged files. Would you like me to group and commit them?"
+            - IF user says NO: STOP.
+            - IF user says YES: Proceed to **Grouping Strategy** (defined in `GEMINI.md`).
+    - IF the output is NOT empty: Proceed to **Analysis**.
+
+3.  **Analysis**: Run `!git diff --staged`.
+4.  **Reason**: Identify the type (feat, fix, etc.) and scope based on the diff.
+5.  **Draft**: specific message following strict Conventional Commits.
+6.  **Confirm**: Ask the user: "Ready to commit with message: `<message>`?"
+7.  **Execute**: If confirmed, run `!git commit -m "<message>"`.
 """

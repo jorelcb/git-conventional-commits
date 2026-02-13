@@ -11,6 +11,15 @@ When asked to generate a commit message, follow this 3-step process:
 2.  **Categorize**: Determine the primary intent using the table below.
 3.  **Synthesize**: Construct a message that fits `<type>(<scope>): <description>`.
 
+### Unstaged Fallback & Grouping Strategy
+If the user approves handling unstaged files:
+1.  **Scan**: Analyze all unstaged files (`git status`, `git diff`).
+2.  **Group**: Logically group files that belong to the same commit (e.g., all `src/auth/*` changes together).
+3.  **Iterate**: For EACH group:
+    a.  **Propose**: "I've grouped these files: [list]. Shall I stage and commit them as `<type>: <desc>`?"
+    b.  **Execute**: If yes, run `!git add <files>` AND `!git commit -m "..."`.
+    c.  **Repeat**: Move to the next group until all changes are handled.
+
 ## 📚 Official Specification (Source of Truth)
 
 ### Commit Message Structure
