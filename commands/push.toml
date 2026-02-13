@@ -1,0 +1,14 @@
+description = "Push changes to remote repository"
+prompt = """
+ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
+
+YOUR GOAL: Push the current local commits to the remote repository.
+
+1.  **Identify**: Get the current branch name (`!git branch --show-current`).
+2.  **Execute**:
+    - Attempt to push: `!git push`.
+    - IF the output mentions "no upstream branch" or "set-upstream":
+        - automatically run: `!git push --set-upstream origin <branch_name>`.
+    - IF the push is rejected (non-fast-forward):
+        - STOP and warn the user: "Push rejected. You might need to pull changes first. Use `git pull`."
+"""
