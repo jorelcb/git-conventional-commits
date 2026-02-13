@@ -1,5 +1,5 @@
 {
     "name": "git-conventional-commits",
     "description": "Git workflow manager enforcing conventional commits and proper feature branching.",
-    "version": "1.0.0"
+    "version": "1.1.0"
 }
