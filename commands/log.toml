@@ -1,0 +1,10 @@
+description = "View git history graph"
+prompt = """
+ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
+
+YOUR GOAL: Show the project history in a beautiful, graph-based format.
+
+1.  **Execute**:
+    - Run: `!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --all`
+2.  **Display**: Show the output to the user.
+"""
