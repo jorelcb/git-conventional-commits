@@ -1,0 +1,10 @@
+description = "Start a new feature branch"
+prompt = """
+ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
+
+YOUR GOAL: Start a new feature branch.
+
+1.  **Ask**: "What feature are we building?" (if not provided).
+2.  **Naming**: Convert input to `kebab-case` (e.g., "User Login" -> `feature/user-login`).
+3.  **Execute**: Run `!git checkout -b <branch_name>`.
+"""

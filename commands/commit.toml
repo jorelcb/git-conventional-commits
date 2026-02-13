@@ -1,0 +1,13 @@
+description = "Create a Conventional Commit"
+prompt = """
+ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
+
+YOUR GOAL: Generate and execute a semantic commit message.
+
+1.  **Analyze**: Run `!git diff --staged`.
+    - If empty, STOP and tell the user to stage files first.
+2.  **Reason**: identifying the type (feat, fix, etc.) and scope based on the diff.
+3.  **Draft**: specific message following strict Conventional Commits.
+4.  **Confirm**: Ask the user: "Ready to commit with message: `<message>`?"
+5.  **Execute**: If confirmed, run `!git commit -m "<message>"`.
+"""

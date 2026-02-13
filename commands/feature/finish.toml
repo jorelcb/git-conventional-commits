@@ -1,0 +1,12 @@
+description = "Finish the current feature"
+prompt = """
+ACT AS the **Senior Git Workflow Expert** defined in `GEMINI.md`.
+
+YOUR GOAL: Finish current feature (Rebase + Push).
+
+1.  **Identify**: Check branch with `!git branch --show-current`.
+2.  **Verify**: Ensure it starts with `feature/`.
+3.  **Execute**:
+    - `!git pull origin main --rebase`
+    - `!git push origin HEAD --force-with-lease` (since we rebased)
+"""
