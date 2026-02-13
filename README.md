@@ -10,6 +10,9 @@ This extension empowers Gemini to act as a **Senior Git Workflow Expert**, guidi
 - **Zero Dependencies**: No Node.js, Python, or compiled binaries required.
 - **System Git**: Executes `!git` commands directly in your shell.
 - **🧠 Context Evaluation**: Analyzes staged changes to suggest semantic messages.
+- **🤝 Interactive Staging**: Smartly groups unstaged files when the staging area is empty.
+- **🚀 Smart Push**: Automatically handles upstream branches.
+- **🎨 Beautiful Logs**: Visualizes project history with a colorful graph.
 
 ## 🚀 Quick Start
 
@@ -30,7 +33,11 @@ gemini extensions install https://github.com/jorelcb/git-conventional-commits
 
 | Command | Description |
 |---------|-------------|
-| `/commit` | 📝 Interactively stage changes and commit with a valid message. |
+| Command | Description |
+|---------|-------------|
+| `/commit` | 📝 Interactively stage (smart grouping) and commit with a valid message. |
+| `/push` | 🚀 Push changes to remote (auto-sets upstream). |
+| `/log` | 📜 View project history in a beautiful graph. |
 | `/feature:start` | 🌿 Start a new feature branch (e.g., `feature/awesome-logic`). |
 | `/feature:finish` | 🏁 Finish the current feature (Rebase + Push). |
 
