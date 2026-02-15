@@ -33,12 +33,10 @@ gemini extensions install https://github.com/jorelcb/git-conventional-commits
 
 | Command | Description |
 |---------|-------------|
-| Command | Description |
-|---------|-------------|
-| `/commit` | 📝 Interactively stage (smart grouping) and commit with a valid message. |
-| `/push` | 🚀 Push changes to remote (auto-sets upstream). |
-| `/log` | 📜 View project history in a beautiful graph. |
-| `/feature:start` | 🌿 Start a new feature branch (e.g., `feature/awesome-logic`). |
-| `/feature:finish` | 🏁 Finish the current feature (Rebase + Push). |
+| `/git:commit` | 📝 Interactively stage (smart grouping) and commit with a valid message. |
+| `/git:push` | 🚀 Push changes to remote (auto-sets upstream). |
+| `/git:log` | 📜 View project history in a beautiful graph. |
+| `/git:feature:start` | 🌿 Start a new feature branch (e.g., `feature/awesome-logic`). |
+| `/git:feature:finish` | 🏁 Finish the current feature (Rebase + Push). |
 
 **Part of the [Gemini Extensions Monorepo](../README.md)**
